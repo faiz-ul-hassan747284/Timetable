@@ -12,12 +12,36 @@
 		var myDate = new Date(); 
 		var myDay = myDate.getDay(); 
 		
-		// Array of days. 
-		var weekday = ['Sunday', 'Monday', 'Tuesday', 
+        // Array of days.
+        var timing = ['0900-0950', '1000-1050', '1100-1150', '1200-1250', '1400-1450', '1500-1550', '1600-1650'] 
+        var lectures = {
+            0: ['None', 'None', 'None', 'None', 'None', 'None', 'None', 'None'],
+            1:
+            ["Seminar/Workshop/Library Period",
+            "Software Requirements Engineering",
+            "Software Requirements Engineering",
+            "Faculty Advisory Meeting",
+            "Computer Networks (Lab)(Computing Lab-03-SEECS)",
+            "Computer Networks (Lab)(Computing Lab-03-SEECS)",
+            "Computer Networks (Lab)(Computing Lab-03-SEECS)"], 
+            2:['Seminar/Workshop/Library Period', 'Seminar/Workshop/Library Period', 'Computer Architecture & Organization', 'Design and Analysis of Algorithms', 'Computer Networks', 'Computer Networks', 'Seminar/Workshop/Library Period'], 
+			3:['Seminar/Workshop/Library Period', 'Complex Variable and Transform', 'Computer Architecture & Organization', 'Software Requirements Engineering', 'Seminar/Workshop/Library Period', 'Sports/Seminar/Workshop Period', 'Sports/Seminar/Workshop Period'], 
+            4:['Seminar/Workshop/Library Period', 'Complex Variable and Transform', 'Design and Analysis of Algorithms', 'Computer Networks', 'Computer Architecture & Organization (Lab) \n(EMS Lab-SEECS)', 'Computer Architecture & Organization (Lab) \n(EMS Lab-SEECS)', 'Computer Architecture & Organization (Lab) \n(EMS Lab-SEECS)'],
+            5:['Seminar/Workshop/Library Period', 'Computer Architecture & Organization', 'Complex Variable and Transform', 'Design and Analysis of Algorithms', 'Seminar/Workshop/Library Period', 'Seminar/Workshop/Library Period', 'Seminar/Workshop/Library Period'], 
+            6: ['None', 'None', 'None', 'None', 'None', 'None', 'None', 'None']
+        }
+		 var weekday = ['Sunday', 'Monday', 'Tuesday', 
 			'Wednesday', 'Thursday', 'Friday', 'Saturday' 
 		]; 
-		document.write("Today is : " + weekday[myDay]); 
-		document.write("<br/>"); 
+        
+        document.write("Today is : " + weekday[myDay]); 
+        document.write("<br/>"); 
+        var todayLecture = lectures[myDay]
+        var i;
+        for (i = 0; i < todayLecture.length; i++) {
+        document .write(timing[i]+"="+ todayLecture[i]+'<br/>');
+        }
+        
 		
 		// get hour value. 
 		var hours = myDate.getHours(); 
