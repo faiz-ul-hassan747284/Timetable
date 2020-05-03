@@ -3,19 +3,21 @@
 
 <head> 
 	<title> 
-		print current day and time 
-	</title> 
+		TimeTable for today
+    </title> 
+    <link rel="icon" href="time.png">
 </head> 
 
 <body> 
-	<script type="text/javascript"> 
+<link rel="stylesheet" href="style.css">
+    <script type="text/javascript"> 
 		var myDate = new Date(); 
 		var myDay = myDate.getDay(); 
 		
         // Array of days.
         var timing = ['0900-0950', '1000-1050', '1100-1150', '1200-1250', '1400-1450', '1500-1550', '1600-1650'] 
         var lectures = {
-            0: ['None', 'None', 'None', 'None', 'None', 'None', 'None', 'None'],
+            0: ['None', 'None', 'None', 'None', 'None', 'None', 'None', ],
             1:
             ["Seminar/Workshop/Library Period",
             "Software Requirements Engineering",
@@ -34,12 +36,11 @@
 			'Wednesday', 'Thursday', 'Friday', 'Saturday' 
 		]; 
         
-        document.write("Today is : " + weekday[myDay]); 
-        document.write("<br/>"); 
+        document.write("<p>Today is : " + weekday[myDay]+"</p>");  
         var todayLecture = lectures[myDay]
         var i;
         for (i = 0; i < todayLecture.length; i++) {
-        document .write(timing[i]+"="+ todayLecture[i]+'<br/>');
+        document .write("<p>"+timing[i]+"="+ todayLecture[i]+'</p>');
         }
         
 		
