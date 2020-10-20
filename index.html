@@ -10,6 +10,8 @@
 
 <body> 
 <link rel="stylesheet" href="style.css">
+<div class="contaniner">
+<ul class="cards">
     <script type="text/javascript"> 
 		var myDate = new Date(); 
 		var myDay = myDate.getDay(); 
@@ -19,28 +21,45 @@
         var lectures = {
             0: ['None', 'None', 'None', 'None', 'None', 'None', 'None', ],
             1:
-            ["Seminar/Workshop/Library Period",
-            "Software Requirements Engineering",
-            "Software Requirements Engineering",
-            "Faculty Advisory Meeting",
-            "Computer Networks (Lab)(Computing Lab-03-SEECS)",
-            "Computer Networks (Lab)(Computing Lab-03-SEECS)",
-            "Computer Networks (Lab)(Computing Lab-03-SEECS)"], 
-            2:['Seminar/Workshop/Library Period', 'Seminar/Workshop/Library Period', 'Computer Architecture & Organization', 'Design and Analysis of Algorithms', 'Computer Networks', 'Computer Networks', 'Seminar/Workshop/Library Period'], 
-			3:['Seminar/Workshop/Library Period', 'Complex Variable and Transform', 'Computer Architecture & Organization', 'Software Requirements Engineering', 'Seminar/Workshop/Library Period', 'Sports/Seminar/Workshop Period', 'Sports/Seminar/Workshop Period'], 
-            4:['Seminar/Workshop/Library Period', 'Complex Variable and Transform', 'Design and Analysis of Algorithms', 'Computer Networks', 'Computer Architecture & Organization (Lab) \n(EMS Lab-SEECS)', 'Computer Architecture & Organization (Lab) \n(EMS Lab-SEECS)', 'Computer Architecture & Organization (Lab) \n(EMS Lab-SEECS)'],
-            5:['Seminar/Workshop/Library Period', 'Computer Architecture & Organization', 'Complex Variable and Transform', 'Design and Analysis of Algorithms', 'Seminar/Workshop/Library Period', 'Seminar/Workshop/Library Period', 'Seminar/Workshop/Library Period'], 
+            ["Make-up/Free",
+            "Operating System",
+            "Software Dsgn and Arch",
+            "Makeup/Free",
+            "Web Engineering",
+            "Intro to Management",
+            "Make-up/Free"], 
+            2:['Make-up/Free',
+             'Software Dsgn and Arch', 
+             'Professional Ethics', 
+             'Make-up/Free', 
+             'Intro to Management', 
+             'Web Engineering', 
+             'Web engineering'], 
+			3:['Make-up/Free', 
+            'Professional Ethics',
+            'Make-up/Free', 
+            'Operating System', 
+            'SDA lab', 
+            'SDA lab', 
+            'SDA lab'], 
+            4:['Professional Ethics', 
+            'Web Eng Lab ', 
+            'Web Eng Lab ', 
+            'Web Eng Lab ', 
+            'Operating System', 'Make-up/Free', 'Make-up/Free'],
+            5:['Make-up/Free', 'Intro to Management', 'Make-up/Free', 'Software dsgn and Arch', 'OS lab', 'OS lab', 'OS lab'], 
             6: ['None', 'None', 'None', 'None', 'None', 'None', 'None', 'None']
         }
 		 var weekday = ['Sunday', 'Monday', 'Tuesday', 
 			'Wednesday', 'Thursday', 'Friday', 'Saturday' 
 		]; 
         
-        document.write("<p>Today is : " + weekday[myDay]+"</p>");  
+        document.write("<h3>Today is : " + weekday[myDay]+"</h3>");  
         var todayLecture = lectures[myDay]
         var i;
         for (i = 0; i < todayLecture.length; i++) {
-        document .write("<p>"+timing[i]+"="+ todayLecture[i]+'</p>');
+        var code = '<li><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><span class="name">'+todayLecture[i]+'</span><span class="title">Time: '+timing[i]+'</span></div></li><br>';
+        document.write(code);
         }
         
 		
@@ -55,6 +74,8 @@
 			" : " + myDate.getMilliseconds(); 
 		document.write("\tCurrent time is : " + myTime); 
 	</script> 
+</ul>
+</div>
 </body> 
 
-</html> 
+</html>
