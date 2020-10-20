@@ -21,33 +21,35 @@
         var lectures = {
             0: ['None', 'None', 'None', 'None', 'None', 'None', 'None', ],
             1:
-            ["Make-up/Free",
+            ["Makeup / Library - period",
             "Operating System",
-            "Software Dsgn and Arch",
+            "Software Design and Architecture",
             "Makeup/Free",
             "Web Engineering",
-            "Intro to Management",
-            "Make-up/Free"], 
-            2:['Make-up/Free',
-             'Software Dsgn and Arch', 
+            "Introduction to Management",
+            "Makeup / Library - period"], 
+            2:['Makeup / Library - period',
+             'Software Design and Architecture', 
              'Professional Ethics', 
-             'Make-up/Free', 
-             'Intro to Management', 
+             'Makeup / Library - period', 
+             'Introduction to Management', 
              'Web Engineering', 
              'Web engineering'], 
-			3:['Make-up/Free', 
+			3:['Makeup / Library - period', 
             'Professional Ethics',
-            'Make-up/Free', 
+            'Makeup / Library - period', 
             'Operating System', 
-            'SDA lab', 
-            'SDA lab', 
-            'SDA lab'], 
+            'Software Design and Architecture lab', 
+            'Software Design and Architecture lab', 
+            'Software Design and Architecture lab'], 
             4:['Professional Ethics', 
-            'Web Eng Lab ', 
-            'Web Eng Lab ', 
-            'Web Eng Lab ', 
-            'Operating System', 'Make-up/Free', 'Make-up/Free'],
-            5:['Make-up/Free', 'Intro to Management', 'Make-up/Free', 'Software dsgn and Arch', 'OS lab', 'OS lab', 'OS lab'], 
+            'Web Engineering Lab ', 
+            'Web Engineering Lab ', 
+            'Web Engineering Lab ', 
+            'Operating System', 
+            'Makeup / Library - period', 
+            'Makeup / Library - period'],
+            5:['Makeup / Library - period', 'Introduction to Management', 'Makeup / Library - period', 'Software Design and Architecture', 'OS lab', 'OS lab', 'OS lab'], 
             6: ['None', 'None', 'None', 'None', 'None', 'None', 'None', 'None']
         }
 		 var weekday = ['Sunday', 'Monday', 'Tuesday', 
@@ -58,7 +60,7 @@
         var todayLecture = lectures[myDay]
         var i;
         for (i = 0; i < todayLecture.length; i++) {
-        var code = '<li style="width:80%"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><span class="name">'+todayLecture[i]+'</span><span class="title">Time: '+timing[i]+'</span></div></li><br>';
+        var code = '<li style="width:70%"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><span class="name">'+todayLecture[i]+'</span><span class="title">Time: '+timing[i]+'</span></div></li><br>';
         document.write(code);
         }
         
