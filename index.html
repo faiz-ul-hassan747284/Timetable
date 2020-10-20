@@ -17,7 +17,7 @@
 		var myDay = myDate.getDay(); 
 		
         // Array of days.
-        var timing = ['0900-0945', '0950-1035', '1040-1125', '1130-1215', '1220-1305', '1310-1355', '1400-1445'] 
+        var timing = ['09:00-09:50', '10:00-10:50', '11:00-11:50', '12:00-12:50', '2:00-2:50', '3:00-3:50', '4:00-4:50'] 
         var lectures = {
             0: ['None', 'None', 'None', 'None', 'None', 'None', 'None', ],
             1:
@@ -58,7 +58,7 @@
         var todayLecture = lectures[myDay]
         var i;
         for (i = 0; i < todayLecture.length; i++) {
-        var code = '<li><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><span class="name">'+todayLecture[i]+'</span><span class="title">Time: '+timing[i]+'</span></div></li><br>';
+        var code = '<li style="width:80%"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><span class="name">'+todayLecture[i]+'</span><span class="title">Time: '+timing[i]+'</span></div></li><br>';
         document.write(code);
         }
         
@@ -70,8 +70,7 @@
 		hours = hours ? hours : 12; 
 		var minutes = myDate.getMinutes(); 
 		minutes = minutes < 10 ? '0' + minutes : minutes; 
-		var myTime = hours + " " + ampm + " : " + minutes + 
-			" : " + myDate.getMilliseconds(); 
+		var myTime = hours + " " + ampm + " : " + minutes+" minutes" ; 
 		document.write("\tCurrent time is : " + myTime); 
 	</script> 
 </ul>
