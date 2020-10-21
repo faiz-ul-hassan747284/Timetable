@@ -36,6 +36,7 @@
     text-align: center;
   }
   .cards li {
+    list-style: none;
     display: inline-block;
     margin: 10px;
     padding: 20px;
@@ -79,6 +80,7 @@
     margin-bottom: 15px;
     text-decoration: none;
     position: relative;
+    list-style: none;
   }
   .cards li .details > span:before,
   .cards li .details > a:before {
@@ -107,7 +109,7 @@
     font-size: large;
     font-weight: 600;
   }
-  .cards li .details .name:before {
+/*  .cards li .details .name:before {
     content: "\f2c0";
   }
   .cards li .details .title:before {
@@ -118,7 +120,7 @@
   }
   .cards li .details .email:before {
     content: "\f003";
-  }
+  }*/
   .cards li:hover {
     background: rgba(235, 237, 189, 0.5);
     -webkit-transition: all 0.2s ease-in-out;
