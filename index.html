@@ -20,38 +20,55 @@
         // Array of days.
         var timing = ['09:00-09:50', '10:00-10:50', '11:00-11:50', '12:00-12:50', '2:00-2:50', '3:00-3:50', '4:00-4:50'] 
         var lectures = {
-            0: ['None', 'None', 'None', 'None', 'None', 'None', 'None', ],
+            0: [['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"] ],
             1:
-            ["Makeup / Library - period",
-            "Operating System",
-            "Software Design and Architecture",
-            "Makeup/Free",
-            "Web Engineering",
-            "Introduction to Management",
-            "Makeup / Library - period"], 
-            2:['Makeup / Library - period',
-             'Software Design and Architecture', 
-             'Professional Ethics', 
-             'Makeup / Library - period', 
-             'Introduction to Management', 
-             'Web Engineering', 
-             'Web engineering'], 
-			3:['Makeup / Library - period', 
-            'Professional Ethics',
-            'Makeup / Library - period', 
-            'Operating System', 
-            'Software Design and Architecture lab', 
-            'Software Design and Architecture lab', 
-            'Software Design and Architecture lab'], 
-            4:['Professional Ethics', 
-            'Web Engineering Lab ', 
-            'Web Engineering Lab ', 
-            'Web Engineering Lab ', 
-            'Operating System', 
-            'Makeup / Library - period', 
-            'Makeup / Library - period'],
-            5:['Makeup / Library - period', 'Introduction to Management', 'Makeup / Library - period', 'Software Design and Architecture', 'OS lab', 'OS lab', 'OS lab'], 
-            6: ['None', 'None', 'None', 'None', 'None', 'None', 'None', 'None']
+            [
+            ["Makeup / Library - period","None"],
+            ["Operating System","Cr-13"],
+            ["Software Design and Architecture","Cr-13"],
+            ["Makeup/Free","None"],
+            ["Web Engineering","Cr-13"],
+            ["Introduction to Management","Cr-13"],
+            ["Makeup / Library - period","None"]
+            ], 
+            2:[
+            ['Makeup / Library - period','Cr-15'],
+             ['Software Design and Architecture','Cr-15'], 
+             ['Professional Ethics','Cr-15'], 
+             ['Makeup / Library - period','None'], 
+             ['Introduction to Management',"Cr-13"], 
+             ['Web Engineering','Cr-13'], 
+             ['Web engineering','Cr-13']
+             ], 
+			3:[
+            ['Makeup / Library - period','None'], 
+            ['Professional Ethics','Cr-15'],
+            ['Makeup / Library - period','None'], 
+            ['Operating System', 'Cr-15'],
+            ['Software Design and Architecture lab',"Computing Lab 2"], 
+            ['Software Design and Architecture lab', "Computing Lab 2"],
+            ['Software Design and Architecture lab',"Computing Lab 2"]
+            ], 
+            4:[
+            ['Professional Ethics', "Cr-15"],
+            ['Web Engineering Lab ',"Computing Lab 5"], 
+            ['Web Engineering Lab ', "Computing Lab 5"],
+            ['Web Engineering Lab ',"Computing Lab 5"], 
+            ['Operating System', "Cr-15"],
+            ['Makeup / Library - period',"None"], 
+            ['Makeup / Library - period',"None"]
+            ],
+            5:[
+            ['Makeup / Library - period','None'],
+            ['Introduction to Management',"Cr-15"],
+            ['Makeup / Library - period',"None"], 
+            ['Software Design and Architecture',"None"], 
+            ['OS lab','Computing Lab 5'],
+            ['OS lab','Computing Lab 5'], 
+            ['OS lab','Computing Lab 5']
+            ], 
+            6: [
+            ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"] ]
         }
 		 var weekday = ['Sunday', 'Monday', 'Tuesday', 
 			'Wednesday', 'Thursday', 'Friday', 'Saturday' 
@@ -61,7 +78,7 @@
         var todayLecture = lectures[myDay]
         var i;
         for (i = 0; i < todayLecture.length; i++) {
-        var code = '<li style="width:70%"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><span class="name">'+todayLecture[i]+'</span><span class="title">Time: '+timing[i]+'</span></div></li><br>';
+        var code = '<li style="width:70%"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><span class="name">'+todayLecture[i][0]+'</span><span class="title">Time: '+timing[i]+'</span><span class="title">Class-room: '+todayLecture[i][1]+'</span></div></li><br>';
         document.write(code);
         }
         
