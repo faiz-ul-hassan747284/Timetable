@@ -12,7 +12,7 @@
 <body> 
 <link rel="stylesheet" href="style.css">
 <div class="contaniner">
-<ul class="cards">
+<ul style="list-style-type:none;" class="cards">
     <script type="text/javascript"> 
 		var myDate = new Date(); 
 		var myDay = myDate.getDay(); 
@@ -62,7 +62,7 @@
             ['Makeup / Library - period','None'],
             ['Introduction to Management',"Cr-15"],
             ['Makeup / Library - period',"None"], 
-            ['Software Design and Architecture',"Cr-14"], 
+            ['Software Design and Architecture',"None"], 
             ['OS lab','Computing Lab 5'],
             ['OS lab','Computing Lab 5'], 
             ['OS lab','Computing Lab 5']
@@ -78,7 +78,7 @@
         var todayLecture = lectures[myDay]
         var i;
         for (i = 0; i < todayLecture.length; i++) {
-        var code = '<li style="width:70%"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/>      <div class="details"><span class="name">'+todayLecture[i][0]+'</span><span class="title">Time: '+timing[i]+'</span><span class="title">Class-room: '+todayLecture[i][1]+'</span></div></li><br>';
+        var code = '<li style="width:70%"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/NUST_Vector.svg/1200px-NUST_Vector.svg.png"/> <div class="details"><span class="name">'+todayLecture[i][0]+'</span><span class="title">Time: '+timing[i]+'</span><span class="title">Class-room: '+todayLecture[i][1]+'</span></div></li><br>';
         document.write(code);
         }
         
