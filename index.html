@@ -1,18 +1,18 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html>
 
-<head> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> 
-		TimeTable for today
-    </title> 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        TimeTable for today
+    </title>
     <link rel="icon" href="time.png">
-</head> 
+</head>
 
-<body> 
-<link rel="stylesheet" href="style.css">
-<!-- <script lang="javascript" src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script> -->
-<!-- <script>
+<body>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script lang="javascript" src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script> -->
+    <!-- <script>
 /* set up XMLHttpRequest */
 var url = "timetable.xlsx";
 var oReq = new XMLHttpRequest();
@@ -41,101 +41,71 @@ oReq.onload = function(e) {
 oReq.send();
     </script> -->
     <div class="contaniner">
-<ul  class="cards">
-    <script type="text/javascript"> 
-        
-		var myDate = new Date(); 
-		var myDay = myDate.getDay(); 
-        var hours = myDate.getHours();
-        // Array of days.
-        var timing = ['09:00-09:50', '10:00-10:50', '11:00-11:50', '12:00-12:50', '2:00-2:50', '3:00-3:50', '4:00-4:50'] 
-        var lectures = {
-            0: [['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"] ],
-            1:
-            [
-            ["Makeup / Library - period","None"],
-            ["Machine Learning","Cr-14"],
-            ["Machine Learning","Cr-14"],
-            ["Makeup/Free","None"],
-            ["Software Construction Lab","Computing Lab 1"],
-            ["Software Construction Lab","Computing Lab 1"],
-            ["Software Construction Lab","Computing Lab 1"]
-            ], 
-            2:[
-            ['Makeup / Library - period','None'],
-             ['Entrepreneurship','SEECS Smart class'], 
-             ['Software Quality Engineering','Cr-14'], 
-             ['Formal Methods','Cr-14'], 
-             ['Machine Learning',"Cr-14"], 
-             ['Numerical Methods','Cr-14'], 
-             ['Numerical Methods','Cr-14']
-             ], 
-			3:[
-            ['Makeup / Library - period','None'], 
-            ['Makeup / Library - period','None'],
-            ['Software Quality Engineering','Cr-14'], 
-            ['Software Construction', 'Cr-14'],
-            ['Makeup / Library - period','None'], 
-            ['Makeup / Library - period','None'],
-            ['Makeup / Library - period','None']
-            ], 
-            4:[
-            ['Makeup / Library - period','None'],
-            ['Entrepreneurship ',"Smart Class Room"], 
-            ['Software Quality Engineering', "Cr-14"],
-            ['Software Construction ',"Cr-14"], 
-            ['Numerical Methods', "Cr-14"],
-            ['Makeup / Library - period',"None"], 
-            ['Makeup / Library - period',"None"]
-            ],
-            5:[
-            ['Makeup / Library - period','None'],
-            ['Software Construction',"Cr-15"],
-            ['Formal Methods',"Cr-15"], 
-            ['Formal Methods',"Cr-15"], 
-            ['Machine Learning lab','Computing Lab 6'],
-            ['Machine Learning lab','Computing Lab 6'], 
-            ['Machine Learning lab','Computing Lab 6']
-            ], 
-            6: [
-            ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"], ['None',"None"] ]
-        }
-		 var weekday = ['Sunday', 'Monday', 'Tuesday', 
-			'Wednesday', 'Thursday', 'Friday', 'Saturday' 
-		]; 
-        
-        document.write("<h3>Today is : " + weekday[myDay]+"</h3>");  
-        
-        if (hours> 17){
-                myDay=(myDay+1)%7
-                
-                document.write('<h2 class="title">Time Table for tomorrow</h2>')
-            }
-        var todayLecture = lectures[myDay]
-        
-        var i;
-        if ([0,6].includes(myDay)){document.write('<h2 class="title">Aj to Maaf kro theeton</h2>')}
-        else{
-            
-            
-        for (i = 0; i < todayLecture.length; i++) {
-        var code = '<li style="width:70%"><img src="https://picsum.photos/200?random='+Math.random()+'"/> <div class="details"><span class="name">'+todayLecture[i][0]+'</span><span class="title">Time: '+timing[i]+'</span><span class="title">Class-room: '+todayLecture[i][1]+'</span></div></li><br>';
-        document.write(code);
-        }}
-        
-		
-		// get hour value. 
-		var hours = myDate.getHours(); 
-		var ampm = hours >= 12 ? 'PM' : 'AM'; 
-		hours = hours % 12; 
-		hours = hours ? hours : 12; 
-		var minutes = myDate.getMinutes(); 
-		minutes = minutes < 10 ? '0' + minutes : minutes; 
-		var myTime = hours + " " + ampm + " : " + minutes+" minutes" ; 
-		document.write("\tCurrent time is : " + myTime); 
-	</script> 
-</ul>
-</div>
-</body> 
+        <ul class="cards">
+            <script type="text/javascript">
+
+                var myDate = new Date();
+                var myDay = myDate.getDay();
+                var hours = myDate.getHours();
+                // Array of days.
+                var timing = ['09:00-09:50', '10:00-10:50', '11:00-11:50', '12:00-12:50', '2:00-2:50', '3:00-3:50', '4:00-4:50']
+                var lectures = {
+                    0: [['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"]],
+                    1:
+                        [
+                            ['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"]],
+                    2: [
+                        ['None', "None"], ['None', "None"], ['None', "None"], ['Open Source System', "Cr-16 IEAC"], ['None', "None"], ['None', "None"], ['None', "None"]
+                    ],
+                    3: [
+                        ['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"], ['Community Service Learning', "SEECS Seminar Hall"], ['Community Service Learning', "SEECS Seminar Hall"], ['Community Service Learning', "SEECS Seminar Hall"]
+                    ],
+                    4: [
+                        ['Organizational Behavior', "Cr-2"], ['None', "None"], ['None', "None"], ['None', "None"], ['Open Source System Lab', "Computing Lab 3"], ['Open Source System', "Computing Lab 3"], ['Open Source System', "Computing Lab 3"]
+                    ],
+                    5: [
+                    ['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"], ['None', "None"]
+                    ],
+                    6: [
+                        ['Organizational Behavior', "Cr-02"], ['Organizational Behavior', "Cr-02"], ['Open Source System', "Cr-16 IEAC"], ['Open Source System', "Cr-16 IEAC"], ['None', "None"], ['None', "None"], ['None', "None"]]
+                }
+                var weekday = ['Sunday', 'Monday', 'Tuesday',
+                    'Wednesday', 'Thursday', 'Friday', 'Saturday'
+                ];
+
+                document.write("<h3>Today is : " + weekday[myDay] + "</h3>");
+
+                if (hours > 17) {
+                    myDay = (myDay + 1) % 7
+
+                    document.write('<h2 class="title">Time Table for tomorrow</h2>')
+                }
+                var todayLecture = lectures[myDay]
+
+                var i;
+                if ([0, 6].includes(myDay)) { document.write('<h2 class="title">Aj to Maaf kro theeton</h2>') }
+                else {
+
+
+                    for (i = 0; i < todayLecture.length; i++) {
+                        var code = '<li style="width:70%"><img src="https://picsum.photos/200?random=' + Math.random() + '"/> <div class="details"><span class="name">' + todayLecture[i][0] + '</span><span class="title">Time: ' + timing[i] + '</span><span class="title">Class-room: ' + todayLecture[i][1] + '</span></div></li><br>';
+                        document.write(code);
+                    }
+                }
+
+
+                // get hour value. 
+                var hours = myDate.getHours();
+                var ampm = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12;
+                hours = hours ? hours : 12;
+                var minutes = myDate.getMinutes();
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                var myTime = hours + " " + ampm + " : " + minutes + " minutes";
+                document.write("\tCurrent time is : " + myTime);
+            </script>
+        </ul>
+    </div>
+</body>
 
 </html>
